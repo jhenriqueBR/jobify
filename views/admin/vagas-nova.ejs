@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="/css/principal.css" rel="stylesheet">
+    <title>Jobify - Administração > Vagas</title>
+</head>
+<body>
+    <%- include('header') %>
+
+    <h2>Administração das Vagas</h2>
+    <h5><a href="/admin %>">Administração</a> > 
+        <a href="/admin/vagas %>">Vagas</a> > 
+        Nova Vaga
+    </h5>
+
+    <div>
+        <form name="vagaForm" method="POST">
+            <label>Título:</label>
+            <input type="text" name="titulo" />
+            <label>Descrição:</label>
+            <textarea name="descricao"></textarea>
+            <label>Categoria:</label>
+            <select name="categoria">
+                <option value=0>Selecione...</option>
+                <% categorias.forEach((categoria) => { %>
+                <option value=<%- categoria.id %>><%- categoria.nome %></option>
+                <% }) %>
+            </select>
+            <button>Salvar</button>
+        </form>
+    </div>
+    
+    
+    
+    
+</body>
+</html>

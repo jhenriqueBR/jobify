@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="/css/principal.css" rel="stylesheet">
+    <title>Jobify - Administração > Vagas</title>
+</head>
+<body>
+    <%- include('header') %>
+
+    <h2>Administração das Vagas</h2>
+    <h5><a href="/admin %>">Administração</a> > Vagas</h5>
+
+    <div>
+        <a href="/admin/vagas/nova %>">(Nova Vaga)</a>
+        <ul>
+            <% vagas.forEach((vaga) => { %>
+            <li>
+                <%- vaga.titulo %>&nbsp;&nbsp;
+                <a href="/admin/vagas/excluir/<%- vaga.id %>">(excluir)</a>&nbsp;
+                <a href="/admin/vagas/editar/<%- vaga.id %>">(editar)</a>&nbsp;
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+    
+    
+    
+    
+</body>
+</html>
